@@ -155,6 +155,7 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 for_window [class="Spotify"]move to workspace $ws9
 assign [class="discord"]workspace $ws10  
 assign [class="Gimp"]workspace $ws8  
+assign [class="libreoffice"]workspace $ws7
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -241,10 +242,10 @@ exec_always --no-startup-id  feh --bg-scale ~/Pictures/Wallpapers/zilean\ wallpa
 exec_always --no-startup-id fcitx5 -d 
 
 # compton/picom
-exec_always picom --experimental-backends 
-
-# gammy
-exec gammy 
+exec_always picom --experimental-backends  
 
 # web browser
 bindsym $mod+shift+b exec brave  
+
+# gammy
+exec gammy
