@@ -60,7 +60,7 @@ font-5 = Font Awesome 6 Free-Solid-900:pixelsize8:2
 
 modules-left = i3
 modules-center = xwindow spotify
-modules-right = xbacklight pulseaudio xkeyboard memory cpu wlan battery cputemp date powermenu
+modules-right = pulseaudio xkeyboard memory cpu wlan battery cputemp date powermenu
 
 separator = ·
 
@@ -294,7 +294,7 @@ type = internal/pulseaudio
 
 format-volume = <label-volume> <bar-volume>
 label-volume = vol %percentage%%
-label-volume-foreground = ${root.foreground}
+label-volume-foreground = ${root.secondary}
 
 label-muted =  muted
 label-muted-foreground = #666
@@ -411,7 +411,10 @@ ramp-foreground = ${colors.foreground-alt}
 [module/cputemp]
 type = custom/script
 exec = ~/.config/polybar/cpu.sh
-interval = 1
+format = <label>
+format-prefix = "tmp " 
+format-prefix-foreground = ${colors.secondary} 
+interval = 1 
 
 [module/powermenu]
 type = custom/menu
